@@ -156,3 +156,97 @@ header ul li a {
   background: var(--deep-green);
   clip-path: circle(600px at right 800px);
 }
+
+@media screen and (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  .toggle {
+    position: sticky;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(./images/menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+  }
+  .toggle.active {
+    background: url(./images/cancel.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    z-index: 12;
+    position: sticky;
+
+    /* filter: invert(1); */
+  }
+
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    z-index: 11;
+
+    /* border-radius: 12px;
+    box-shadow: 2px 12px 75px rgb(202, 200, 200); */
+  }
+  .navigation.active li {
+    padding: 20px 0;
+  }
+  header .logo {
+    max-width: 60px;
+  }
+  header ul {
+    display: none;
+  }
+  section {
+    padding: 20px 50px 120px;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .content .imgBox {
+    width: 100%;
+    transform: scale(1.13);
+    justify-content: center;
+    padding-left: 50px;
+  }
+  .content .imgBox img {
+    max-width: 250px;
+  }
+
+  .content .imgBox img:hover {
+    transform: scale(1);
+  }
+  .content .textBox h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  .content .textBox p {
+    margin-bottom: 12px;
+  }
+  .circle {
+    clip-path: circle(400px at center bottom);
+  }
+  .thumb li img {
+    max-width: 45px;
+  }
+  .thumb li:hover {
+    transform: translateY(0);
+  }
+  .sci {
+    background: var(--deep-green);
+    right: 0;
+    border-radius: 4px 0px 0 4px;
+    padding: 4px;
+  }
+}
